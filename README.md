@@ -25,7 +25,8 @@ usdc: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
 ## 依赖  
 node 20  
 ## 安装  
-npm i   
+npm install -g pnpm
+pnpm i   
 ## 调试  
 npm run dev  
 ## 构建  
