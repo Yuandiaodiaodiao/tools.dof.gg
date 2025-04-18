@@ -20,25 +20,12 @@ const web3 = new Web3(baseConfig.rpcUrl);
 // Contract address (you'll need to replace this with your actual contract address)
 const contractAddress = '0x3C436Aa573877D9ee8e4B05B01B2c5dA60cf04ca';
 
-// Create contract instance
-const contract = new web3.eth.Contract(abiA, contractAddress);
+
 
 // Token contract instance
 const tokenContract = new web3.eth.Contract(tokenabi, contractAddress);
 
-// Function to get user info
-export const getUserInfo = async (address) => {
-    try {
-        const result = await contract.methods.userInfo(address).call();
-        return {
-            amount: result.amount,
-            rewardDebt: result.rewardDebt
-        };
-    } catch (error) {
-        console.error('Error fetching user info:', error);
-        throw error;
-    }
-};
+
 
 // Function to get token balance
 export const getTokenBalance = async (address) => {
@@ -306,4 +293,4 @@ export const getNFTTransfers = async (address) => {
     }
 };
 
-export { web3, contract, baseConfig };
+export { web3, baseConfig };
