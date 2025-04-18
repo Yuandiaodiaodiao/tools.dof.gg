@@ -57,7 +57,7 @@ const removeAccount = (index) => {
       <BankInfo :address="account.address" />
     </div>
   </div>
-  <div style="position:fixed;bottom:0">buy me a coffee ,  bsc chain 0xa78e660aec9eed4ba6bba3f07a3f8e1cee43e274</div>
+  <div style="position:fixed;bottom:0;color:gray">buy me a coffee ,  bsc chain 0xa78e660aec9eed4ba6bba3f07a3f8e1cee43e274</div>
 </template>
 
 <style>
@@ -74,6 +74,7 @@ body {
   color: white;
   background: rgba(0,0,0,0.5);
   padding: 10px;
+  left:0;
   width: 100%;
 }
 
