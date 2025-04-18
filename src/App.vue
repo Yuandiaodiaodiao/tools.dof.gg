@@ -36,6 +36,7 @@ const removeAccount = (index) => {
   <div style="position:fixed;top:0" class="header-info">
     <div>游戏链接https://dof.gg/</div>
     <div>我的邀请链接https://dof.gg/login?ref=0xcz</div>
+    <div>推特 https://x.com/FortuneDungeons 推特里有空投领取链接http://claim.dof.gg</div>
     <div>没有人会询问你的私钥, 保护好自己的钱包</div>
   </div>
   
