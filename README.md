@@ -1,21 +1,27 @@
-# Vue 3 + Vite
+币的地址
+token: "0x3C436Aa573877D9ee8e4B05B01B2c5dA60cf04ca",  
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+nft合约地址
+heroes: "0x0085B7172BE81D5cbA0dc394b728bDC03324a1D5",  
 
-While this project uses Vue.js, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
 
-## Deploy Your Own
+nft相关铸币
+heroMinter: "0x2f59e64454a872686474dCcF20BD5e46929ce66A",  
 
-Deploy your own Vite project with Vercel.
 
-[![Deploy with Vercel](https://vercel.com/button)]([https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/framework-boilerplates/vite&template=vite](https://vercel.com/new/clone?demo-description=Vite%2FVue.js%20site%20that%20can%20be%20deployed%20to%20Vercel&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F2T4BUF3mEBKPJF3jcjU6nS%2F0d4a02e7c48091d13814a4ab513e8734%2FScreen_Shot_2022-04-13_at_10.05.56_PM.png&demo-title=Vite%20-%20Vue&demo-url=https%3A%2F%2Fvite-vue-template.vercel.app%2F&from=templates&project-name=Vite%20-%20Vue&repository-name=vite-vue&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fvercel%2Ftree%2Fmain%2Fexamples%2Fvite&skippable-integrations=1))
+没看懂  
+dungeonPayment: "0xa2e1BcD6bf717e3BaA1Dc184C5C32FD40271A82e", 
 
-_Live Example: https://vite-vue-template.vercel.app_
 
-### Deploying From Your Terminal
+银行
+dungeonStaking: "0x231F0e10E095D7f78D29C9a8Aa76991A013c1E72",  
 
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
 
-```shell
-$ vercel
-```
+右下角的存钱罐的claim按钮 , 英雄的进入地牢
+withdrawal: "0xa4776C3D158143D69479B3f6dBBf68F6d3699292",  
+
+usdc: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"  
+
+
+npm run dev
+npm run build
