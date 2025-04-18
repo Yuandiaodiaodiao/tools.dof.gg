@@ -1,6 +1,9 @@
 <script setup>
 import { getBankInfo } from '../web3info.js';
 import { ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const props = defineProps({
   address: {
@@ -44,19 +47,19 @@ watch(() => props.address, () => {
 <template>
   <div class="bank-info" v-if="Object.keys(bankInfo).length > 0">
     <div class="info-header">
-      <h3>银行信息</h3>
+      <h3>{{ t('bankInfo.title') }}</h3>
     </div>
     <div class="info-content">
       <div class="info-item">
-        <div class="info-label">质押数量</div>
+        <div class="info-label">{{ t('bankInfo.stakedAmount') }}</div>
         <div class="info-value">{{ parseFloat(bankInfo.deposit).toFixed(3) }} Coin</div>
       </div>
       <div class="info-item">
-        <div class="info-label">待领取奖励</div>
+        <div class="info-label">{{ t('bankInfo.claimableRewards') }}</div>
         <div class="info-value highlight">{{ parseFloat(bankInfo.rewardBalance).toFixed(3) }} Coin</div>
       </div>
       <div class="info-item">
-        <div class="info-label">待结算奖励</div>
+        <div class="info-label">{{ t('bankInfo.pendingRewards') }}</div>
         <div class="info-value highlight">{{ parseFloat(bankInfo.pendingRewards).toFixed(3) }} Coin</div>
       </div>
     </div>

@@ -7,6 +7,10 @@ import BankInfo from './components/BankInfo.vue';
 import HeroNFTInfo from './components/HeroNFTInfo.vue';
 import AccountName from './components/AccountName.vue';
 import AccountAddress from './components/AccountAddress.vue';
+import LanguageSwitch from './components/LanguageSwitch.vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const addAccount = () => {
   accounts.value.push(({ 
@@ -33,15 +37,18 @@ const removeAccount = (index) => {
 </script>
 
 <template>
-  <div style="position:fixed;top:0" class="header-info">
-    <div>游戏链接https://dof.gg/</div>
-    <div>我的邀请链接https://dof.gg/login?ref=0xcz</div>
-    <div>推特 https://x.com/FortuneDungeons 推特里有空投领取链接http://claim.dof.gg</div>
-    <div>没有人会询问你的私钥, 保护好自己的钱包</div>
+  <LanguageSwitch />
+  
+  <div style="position:relative;top:0;left:0" class="header-info">
+    <div>{{ t('header.gameLink') }}</div>
+    <div>{{ t('header.inviteLink') }}</div>
+    <div>{{ t('header.securityReminder') }}</div>
   </div>
   
-  <p class="title">dof.gg账号查看器</p>
-  <button @click="addAccount"> 添加地址 </button>
+  <div>
+  <div class="title">{{ t('title') }}</div>
+  <button @click="addAccount">{{ t('buttons.add') }}</button>
+  </div>
 
   <div class="accounts-container">
     <div v-for="(account, index) in accounts" :key="account.address" class="account-info">
@@ -50,7 +57,7 @@ const removeAccount = (index) => {
           <AccountName v-model="account.name" />
           <AccountAddress v-model="account.address" />
         </div>
-        <button class="delete-btn" @click="removeAccount(index)">×</button>
+        <button class="delete-btn" @click="removeAccount(index)">{{ t('buttons.delete') }}</button>
       </div>
       
       <HeroNFTInfo :address="account.address" />
@@ -58,7 +65,7 @@ const removeAccount = (index) => {
       <BankInfo :address="account.address" />
     </div>
   </div>
-  <div style="position:fixed;bottom:0;color:gray">buy me a coffee ,  bsc chain 0xa78e660aec9eed4ba6bba3f07a3f8e1cee43e274</div>
+  <div style="position:fixed;bottom:0">{{ t('footer') }}</div>
 </template>
 
 <style>
@@ -75,7 +82,6 @@ body {
   color: white;
   background: rgba(0,0,0,0.5);
   padding: 10px;
-  left:0;
   width: 100%;
 }
 

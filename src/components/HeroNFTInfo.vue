@@ -1,6 +1,9 @@
 <script setup>
 import { getHeroNFTInfo } from '../web3info.js';
 import { ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const props = defineProps({
   address: {
@@ -30,32 +33,11 @@ watch(() => props.address, () => {
 </script>
 
 <template>
-  <div class="hero-nft-info" v-if="Object.keys(heroNFTInfo).length > 0">
-    <div class="info-item">
-      <span class="info-label">英雄数量: </span>
-      <span class="info-value">{{ heroNFTInfo.totalHeroes }}</span>
-    </div>
+  <div class="info-section" v-if="Object.keys(heroNFTInfo).length > 0">
+    <h3>{{ t('heroNFT.heroCount') }} {{ heroNFTInfo.totalHeroes }}</h3>
   </div>
 </template>
 
 <style scoped>
-.hero-nft-info {
-  margin: 10px 0;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.info-label {
-  color: #00bcd4;
-  font-size: 0.9em;
-}
-
-.info-value {
-  font-weight: bold;
-  color: white;
-}
+/* 使用全局样式，这里不需要额外定义 */
 </style> 

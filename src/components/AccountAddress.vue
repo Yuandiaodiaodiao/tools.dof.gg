@@ -1,4 +1,8 @@
 <script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
 const props = defineProps({
   modelValue: {
     type: String,
@@ -15,9 +19,9 @@ const updateValue = (event) => {
 
 <template>
   <div class="input-group">
-    <span>钱包: </span>
+    <span>{{ t('account.wallet') }}</span>
     <input 
-      placeholder="地址" 
+      :placeholder="t('account.walletPlaceholder')" 
       type="text" 
       :value="modelValue"
       @input="updateValue"
